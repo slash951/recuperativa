@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 public class MainActivity extends AppCompatActivity {
     Button btSiguiente;
     @Override
@@ -20,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btSiguiente=(Button) findViewById(R.id.btSiguiente);
-
+        Intent intent =new Intent(MainActivity.this, MainActivity2.class);
         btSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(MainActivity.this, MainActivity.class);
+
                 startActivity(intent);
             }
         });
